@@ -55,14 +55,17 @@
       (requires-pattern . 2)
       (action . ,(helm-source-ad-command-action cmd)))))
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; helm-ad-user
 ;;;
+(defvar helm-source-ad-user (helm-source-ad-command "user"))
+
 (defun helm-ad-user ()
   (interactive)
-  (helm-other-buffer `(,(helm-source-ad-command "user"))
-                     "*helm ad user*"))
+  (helm-other-buffer '(helm-source-ad-user) "*helm ad user*"))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
