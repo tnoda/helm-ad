@@ -76,3 +76,13 @@
 (defun helm-ad-contact ()
   (interactive)
   (helm-other-buffer '(helm-source-ad-contact) "*helm ad contact*"))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; helm-ad
+;;;
+(defun helm-ad ()
+  (interactive)
+  (helm-other-buffer '(helm-source-ad-user helm-source-ad-contact)
+                     "*helm ad*"))
