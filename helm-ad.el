@@ -71,7 +71,8 @@
 ;;;
 ;;; helm-ad-contact
 ;;; 
+(defvar helm-source-ad-contact (helm-source-ad-command "contact"))
+
 (defun helm-ad-contact ()
   (interactive)
-  (helm-other-buffer `(,(helm-source-ad-command "contact"))
-                     "helm ad contact"))
+  (helm-other-buffer '(helm-source-ad-contact) "*helm ad contact*"))
