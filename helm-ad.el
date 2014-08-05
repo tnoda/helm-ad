@@ -27,9 +27,7 @@
 ;; command line utilities, such as gsquery and gsget.
 
 ;;; Code:
-(eval-when-compile
-  (require 'cl))
-
+(require 'cl-lib)
 (require 'dash)
 
 (defvar helm-source-ad-action-alist nil)
