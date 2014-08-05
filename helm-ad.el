@@ -6,7 +6,7 @@
 ;; Created: Jul 31, 2014
 ;; Version: 0.0.1
 ;; Keywords: comm
-;; Package-Requires: ((dash "2.8.0"))
+;; Package-Requires: ((dash "2.8.0") (cl-lib "0.5") (helm "1.6.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; helm-ad provides helm sourse and commands for Active Directory's
+;; helm-ad provides helm source and commands for Active Directory's
 ;; command line utilities, such as gsquery and gsget.
 
 ;;; Code:
