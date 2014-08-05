@@ -29,6 +29,7 @@
 ;;; Code:
 (require 'cl-lib)
 (require 'dash)
+(require 'helm)
 
 (defvar helm-ad-action-function 'insert)
 (defvar helm-source-ad-action-alist nil)
