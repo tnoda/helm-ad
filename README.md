@@ -21,6 +21,7 @@ Requirements
 Dependencies
 -------------------
 
+* helm.el
 * [dash.el](https://github.com/magnars/dash.el)
 
 
