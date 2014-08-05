@@ -40,7 +40,7 @@ Variables
 * `helm-ad-action-function`
   - The property selected by `helm-ad` is added to
     `kill-ring`, and then passed to this function.
-  - Defaults `insert`. So after the helm action
+  - It defaults `insert`. So after the helm action
     is selected, the property will be inserted
     into your point.
 
