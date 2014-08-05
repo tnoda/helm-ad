@@ -1,7 +1,32 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;
-;;; helm-ad
-;;; 
+;;; helm-ad.el --- helm source for Active Directory
+
+;; Copyright (C) 2014  Takahiro Noda
+
+;; Author: Takahiro Noda <takahiro.noda+github@gmail.com>
+;; Created: Jul 31, 2013
+;; Version: 0.0.0
+;; Keywords: comm
+;; Package-Requires: ((dash "2.8.0"))
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; helm-ad provides helm sourse and commands for Active Directory's
+;; command line utilities, such as gsquery and gsget.
+
+;;; Code:
 (eval-when-compile
   (require 'cl))
 
@@ -78,11 +103,12 @@
   (helm-other-buffer '(helm-source-ad-contact) "*helm ad contact*"))
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;
-;;; helm-ad
-;;;
+;;;###autoload
 (defun helm-ad ()
   (interactive)
   (helm-other-buffer '(helm-source-ad-user helm-source-ad-contact)
                      "*helm ad*"))
+
+
+(provide 'helm-ad)
+;;; helm-ad.el ends here
