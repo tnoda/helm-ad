@@ -30,6 +30,7 @@
 (require 'cl-lib)
 (require 'dash)
 
+(defvar helm-ad-action-function 'insert)
 (defvar helm-source-ad-action-alist nil)
 (defvar helm-source-ad-params-contact nil)
 (defvar helm-source-ad-params-user nil)
@@ -75,7 +76,7 @@
         (if (re-search-forward "^  \\(.*\\)  $" nil t)
             (kill-new (match-string-no-properties 1))
           (error "dsget did not return any objects")))
-      (insert (car kill-ring)))))
+      (funcall helm-ad-action-function (car kill-ring)))))
 
 (defun helm-source-ad-command-action (cmd)
   (-map (lambda (prop)
