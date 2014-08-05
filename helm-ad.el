@@ -124,6 +124,10 @@
 
 ;;;###autoload
 (defun helm-ad ()
+  "Query the directory by using the `dsquery` command,
+and display the selected property of a specific object.
+The property can be selected as a helm action,
+and will be displayed by using the `dsget` command."
   (interactive)
   (helm-other-buffer '(helm-source-ad-user helm-source-ad-contact)
                      "*helm ad*"))
