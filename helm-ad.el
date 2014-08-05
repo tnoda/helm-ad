@@ -3,7 +3,7 @@
 ;; Copyright (C) 2014  Takahiro Noda
 
 ;; Author: Takahiro Noda <takahiro.noda+github@gmail.com>
-;; Created: Jul 31, 2013
+;; Created: Jul 31, 2014
 ;; Version: 0.0.1
 ;; Keywords: comm
 ;; Package-Requires: ((dash "2.8.0"))
