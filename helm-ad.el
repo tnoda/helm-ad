@@ -4,7 +4,7 @@
 
 ;; Author: Takahiro Noda <takahiro.noda+github@gmail.com>
 ;; Created: Jul 31, 2013
-;; Version: 0.0.0
+;; Version: 0.0.1
 ;; Keywords: comm
 ;; Package-Requires: ((dash "2.8.0"))
 
