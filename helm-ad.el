@@ -59,7 +59,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
-;;; Helper functions
+;;; Helper functions for meta-programming
 ;;; 
 (defun helm-ad-dsget-function (cmd prop)
   (lexical-let ((cmd cmd)
