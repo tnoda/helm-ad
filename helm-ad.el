@@ -31,11 +31,30 @@
 (require 'dash)
 
 (defvar helm-source-ad-action-alist nil)
+(defvar helm-source-ad-params-contact nil)
+(defvar helm-source-ad-params-user nil)
 
+(unless helm-source-ad-params-contact
+  (setq helm-source-ad-params-contact '("dn"
+                                        "display"
+                                        "desc"
+                                        "office"
+                                        "tel"
+                                        "email"
+                                        "hometel"
+                                        "pager"
+                                        "mobile"
+                                        "fax"
+                                        "iptel"
+                                        "title"
+                                        "dept"
+                                        "company")))
+(unless helm-source-ad-params-user
+  (setq helm-source-ad-params-user helm-source-ad-params-contact))
 (unless helm-source-ad-action-alist
   (setq helm-source-ad-action-alist
-        `(("user". ("email" "tel" "office"))
-          ("contact" . ("email" "tel" "office")))))
+        `(("contact" . ,helm-source-ad-params-contact)
+          ("user". ,helm-source-ad-params-user))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
@@ -53,8 +72,9 @@
                       (concat "-" prop))
         (goto-char (point-min))
         (forward-line)
-        (re-search-forward "[^ ]+" nil t)
-        (kill-new (match-string-no-properties 0)))
+        (if (re-search-forward "^  \\(.*\\)  $" nil t)
+            (kill-new (match-string-no-properties 1))
+          (error "dsget did not return any objects")))
       (insert (car kill-ring)))))
 
 (defun helm-source-ad-command-action (cmd)
