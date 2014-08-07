@@ -71,10 +71,10 @@
         (call-process "dsget" nil t nil
                       cmd
                       (substring dn 1 (1- (length dn)))
+                      "-l"
                       (concat "-" prop))
         (goto-char (point-min))
-        (forward-line)
-        (if (re-search-forward "^  \\(.*\\)  $" nil t)
+        (if (re-search-forward ".*: *\\(.*\\)" nil t)
             (kill-new (match-string-no-properties 1))
           (error "dsget did not return any objects")))
       (funcall helm-ad-action-function (car kill-ring)))))
