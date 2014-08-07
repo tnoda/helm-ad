@@ -21,7 +21,7 @@ Requirements
 Dependencies
 -------------------
 
-* helm.el
+* [Emacs Helm](https://github.com/emacs-helm/helm)
 * [dash.el](https://github.com/magnars/dash.el)
 
 
