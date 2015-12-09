@@ -31,6 +31,9 @@
 (require 'dash)
 (require 'helm)
 
+(eval-when-compile
+  (require 'cl))
+
 (defvar helm-ad-action-function 'insert)
 (defvar helm-source-ad-action-alist nil)
 (defvar helm-source-ad-params-contact nil)
